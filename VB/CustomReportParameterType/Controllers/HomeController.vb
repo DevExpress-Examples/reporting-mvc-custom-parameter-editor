@@ -1,6 +1,8 @@
-﻿Imports CustomReportParameterType.Services
+﻿Imports System.Web.Mvc
+Imports CustomReportParameterType.Services
 Imports DevExpress.DataAccess.Sql
 Imports DevExpress.XtraReports.Native
+Imports DevExpress.XtraReports.UI
 
 Namespace CustomReportParameterType.Controllers
     Public Class HomeController

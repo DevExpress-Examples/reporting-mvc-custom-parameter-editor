@@ -3,7 +3,10 @@ Imports System.Collections.Generic
 Imports System.Linq
 Imports System.Web
 Imports System.Web.Http
+Imports System.Web.Mvc
+Imports System.Web.Routing
 Imports CustomReportParameterType.Services
+Imports DevExpress.Web.Mvc
 Imports DevExpress.XtraReports.Native
 Imports DevExpress.XtraReports.Web.WebDocumentViewer
 

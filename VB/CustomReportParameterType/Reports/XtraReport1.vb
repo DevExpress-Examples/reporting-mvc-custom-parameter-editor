@@ -5,6 +5,7 @@ Imports System.ComponentModel
 Imports DevExpress.XtraReports.Parameters
 Imports CustomReportParameterType.Services
 Imports System.Collections.Generic
+Imports DevExpress.XtraReports.UI
 
 ''' <summary>
 ''' Summary description for XtraReport1
@@ -54,9 +55,9 @@ Public Class XtraReport1
 
         Me.customMailParameterText.Value = New CustomParameterType With {.Value = "SampleMail@mail.com"}
 
-        Me.customMailParameterMultivalue.Value = New List(Of CustomParameterType) From { _
-            New CustomParameterType With {.Value = "FirstSampleMail@mail.com"}, _
-            New CustomParameterType With {.Value = "SecondSampleMail@mail.com"} _
+        Me.customMailParameterMultivalue.Value = New List(Of CustomParameterType) From {
+            New CustomParameterType With {.Value = "FirstSampleMail@mail.com"},
+            New CustomParameterType With {.Value = "SecondSampleMail@mail.com"}
         }
 
         Dim parameterLookUpValue3 = New CustomParameterType With {.Value = "MyThirdMail@mail.com"}
@@ -76,7 +77,7 @@ Public Class XtraReport1
         MyBase.Dispose(disposing)
     End Sub
 
-    #Region "Designer generated code"
+#Region "Designer generated code"
 
     ''' <summary>
     ''' Required method for Designer support - do not modify
@@ -109,18 +110,18 @@ Public Class XtraReport1
         ' 
         ' Detail
         ' 
-        Me.Detail.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() { Me.xrLabel2, Me.xrLabel8, Me.xrLabel9, Me.xrLabel6, Me.xrLabel7, Me.xrLabel4, Me.xrLabel5, Me.xrLabel3, Me.xrLabel10})
+        Me.Detail.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.xrLabel2, Me.xrLabel8, Me.xrLabel9, Me.xrLabel6, Me.xrLabel7, Me.xrLabel4, Me.xrLabel5, Me.xrLabel3, Me.xrLabel10})
         Me.Detail.HeightF = 289.7084F
         Me.Detail.KeepTogether = True
         Me.Detail.Name = "Detail"
-        Me.Detail.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F)
+        Me.Detail.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0F)
         Me.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         ' 
         ' TopMargin
         ' 
         Me.TopMargin.HeightF = 78.20841F
         Me.TopMargin.Name = "TopMargin"
-        Me.TopMargin.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F)
+        Me.TopMargin.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0F)
         Me.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         ' 
         ' xrLabel10
@@ -128,18 +129,18 @@ Public Class XtraReport1
         Me.xrLabel10.LocationFloat = New DevExpress.Utils.PointFloat(0F, 0F)
         Me.xrLabel10.Multiline = True
         Me.xrLabel10.Name = "xrLabel10"
-        Me.xrLabel10.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F)
+        Me.xrLabel10.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0F)
         Me.xrLabel10.SizeF = New System.Drawing.SizeF(249.4583F, 25.55338F)
         Me.xrLabel10.StyleName = "Title"
         Me.xrLabel10.Text = "Send this report to:"
         ' 
         ' xrLabel8
         ' 
-        Me.xrLabel8.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() { New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Parameters].[customMailParameterMultivalueLookup]")})
+        Me.xrLabel8.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Parameters].[customMailParameterMultivalueLookup]")})
         Me.xrLabel8.LocationFloat = New DevExpress.Utils.PointFloat(377.4291F, 227.125F)
         Me.xrLabel8.Multiline = True
         Me.xrLabel8.Name = "xrLabel8"
-        Me.xrLabel8.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F)
+        Me.xrLabel8.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0F)
         Me.xrLabel8.SizeF = New System.Drawing.SizeF(262.5709F, 62.58339F)
         Me.xrLabel8.Text = "xrLabel2"
         ' 
@@ -148,7 +149,7 @@ Public Class XtraReport1
         Me.xrLabel9.LocationFloat = New DevExpress.Utils.PointFloat(0F, 227.125F)
         Me.xrLabel9.Multiline = True
         Me.xrLabel9.Name = "xrLabel9"
-        Me.xrLabel9.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F)
+        Me.xrLabel9.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0F)
         Me.xrLabel9.SizeF = New System.Drawing.SizeF(377.4291F, 62.58336F)
         Me.xrLabel9.StyleName = "Title"
         Me.xrLabel9.StylePriority.UseTextAlignment = False
@@ -157,12 +158,12 @@ Public Class XtraReport1
         ' 
         ' xrLabel6
         ' 
-        Me.xrLabel6.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() { New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Parameters].[customMailParameterMultivalue]")})
+        Me.xrLabel6.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Parameters].[customMailParameterMultivalue]")})
         Me.xrLabel6.LocationFloat = New DevExpress.Utils.PointFloat(377.4291F, 171.9166F)
         Me.xrLabel6.Multiline = True
         Me.xrLabel6.Name = "xrLabel6"
-        Me.xrLabel6.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F)
-        Me.xrLabel6.SizeF = New System.Drawing.SizeF(262.5709F, 23F)
+        Me.xrLabel6.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0F)
+        Me.xrLabel6.SizeF = New System.Drawing.SizeF(262.5709F, 23.0F)
         Me.xrLabel6.Text = "xrLabel2"
         ' 
         ' xrLabel7
@@ -170,7 +171,7 @@ Public Class XtraReport1
         Me.xrLabel7.LocationFloat = New DevExpress.Utils.PointFloat(0F, 169.3633F)
         Me.xrLabel7.Multiline = True
         Me.xrLabel7.Name = "xrLabel7"
-        Me.xrLabel7.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F)
+        Me.xrLabel7.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0F)
         Me.xrLabel7.SizeF = New System.Drawing.SizeF(377.4291F, 25.55339F)
         Me.xrLabel7.StyleName = "Title"
         Me.xrLabel7.StylePriority.UseTextAlignment = False
@@ -179,11 +180,11 @@ Public Class XtraReport1
         ' 
         ' xrLabel4
         ' 
-        Me.xrLabel4.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() { New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Parameters].[customMailParameterText]")})
+        Me.xrLabel4.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Parameters].[customMailParameterText]")})
         Me.xrLabel4.LocationFloat = New DevExpress.Utils.PointFloat(377.4291F, 115.2083F)
         Me.xrLabel4.Multiline = True
         Me.xrLabel4.Name = "xrLabel4"
-        Me.xrLabel4.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F)
+        Me.xrLabel4.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0F)
         Me.xrLabel4.SizeF = New System.Drawing.SizeF(262.5709F, 28.20834F)
         Me.xrLabel4.Text = "xrLabel2"
         ' 
@@ -192,7 +193,7 @@ Public Class XtraReport1
         Me.xrLabel5.LocationFloat = New DevExpress.Utils.PointFloat(0F, 115.2083F)
         Me.xrLabel5.Multiline = True
         Me.xrLabel5.Name = "xrLabel5"
-        Me.xrLabel5.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F)
+        Me.xrLabel5.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0F)
         Me.xrLabel5.SizeF = New System.Drawing.SizeF(377.4291F, 28.20834F)
         Me.xrLabel5.StyleName = "Title"
         Me.xrLabel5.StylePriority.UseTextAlignment = False
@@ -204,7 +205,7 @@ Public Class XtraReport1
         Me.xrLabel3.LocationFloat = New DevExpress.Utils.PointFloat(0F, 47.91667F)
         Me.xrLabel3.Multiline = True
         Me.xrLabel3.Name = "xrLabel3"
-        Me.xrLabel3.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F)
+        Me.xrLabel3.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0F)
         Me.xrLabel3.SizeF = New System.Drawing.SizeF(377.4291F, 55.29165F)
         Me.xrLabel3.StyleName = "Title"
         Me.xrLabel3.StylePriority.UseTextAlignment = False
@@ -213,18 +214,18 @@ Public Class XtraReport1
         ' 
         ' xrLabel2
         ' 
-        Me.xrLabel2.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() { New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Parameters].[customMailParameterLookup]")})
+        Me.xrLabel2.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Parameters].[customMailParameterLookup]")})
         Me.xrLabel2.LocationFloat = New DevExpress.Utils.PointFloat(377.4291F, 47.91667F)
         Me.xrLabel2.Multiline = True
         Me.xrLabel2.Name = "xrLabel2"
-        Me.xrLabel2.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F)
+        Me.xrLabel2.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0F)
         Me.xrLabel2.SizeF = New System.Drawing.SizeF(262.5709F, 55.29165F)
         Me.xrLabel2.Text = "xrLabel2"
         ' 
         ' BottomMargin
         ' 
         Me.BottomMargin.Name = "BottomMargin"
-        Me.BottomMargin.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F)
+        Me.BottomMargin.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0F)
         Me.BottomMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         ' 
         ' Title
@@ -232,8 +233,8 @@ Public Class XtraReport1
         Me.Title.BackColor = System.Drawing.Color.Transparent
         Me.Title.BorderColor = System.Drawing.Color.Black
         Me.Title.Borders = DevExpress.XtraPrinting.BorderSide.None
-        Me.Title.BorderWidth = 1F
-        Me.Title.Font = New System.Drawing.Font("Tahoma", 14F)
+        Me.Title.BorderWidth = 1.0F
+        Me.Title.Font = New System.Drawing.Font("Tahoma", 14.0F)
         Me.Title.ForeColor = System.Drawing.Color.FromArgb((CInt((CByte(75)))), (CInt((CByte(75)))), (CInt((CByte(75)))))
         Me.Title.Name = "Title"
         ' 
@@ -242,18 +243,18 @@ Public Class XtraReport1
         Me.DetailCaption3.BackColor = System.Drawing.Color.Transparent
         Me.DetailCaption3.BorderColor = System.Drawing.Color.Transparent
         Me.DetailCaption3.Borders = DevExpress.XtraPrinting.BorderSide.None
-        Me.DetailCaption3.Font = New System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold)
+        Me.DetailCaption3.Font = New System.Drawing.Font("Tahoma", 8.0F, System.Drawing.FontStyle.Bold)
         Me.DetailCaption3.ForeColor = System.Drawing.Color.FromArgb((CInt((CByte(75)))), (CInt((CByte(75)))), (CInt((CByte(75)))))
         Me.DetailCaption3.Name = "DetailCaption3"
-        Me.DetailCaption3.Padding = New DevExpress.XtraPrinting.PaddingInfo(6, 6, 0, 0, 100F)
+        Me.DetailCaption3.Padding = New DevExpress.XtraPrinting.PaddingInfo(6, 6, 0, 0, 100.0F)
         Me.DetailCaption3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
         ' 
         ' DetailData3
         ' 
-        Me.DetailData3.Font = New System.Drawing.Font("Tahoma", 8F)
+        Me.DetailData3.Font = New System.Drawing.Font("Tahoma", 8.0F)
         Me.DetailData3.ForeColor = System.Drawing.Color.Black
         Me.DetailData3.Name = "DetailData3"
-        Me.DetailData3.Padding = New DevExpress.XtraPrinting.PaddingInfo(6, 6, 0, 0, 100F)
+        Me.DetailData3.Padding = New DevExpress.XtraPrinting.PaddingInfo(6, 6, 0, 0, 100.0F)
         Me.DetailData3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
         ' 
         ' DetailData3_Odd
@@ -261,11 +262,11 @@ Public Class XtraReport1
         Me.DetailData3_Odd.BackColor = System.Drawing.Color.FromArgb((CInt((CByte(231)))), (CInt((CByte(231)))), (CInt((CByte(231)))))
         Me.DetailData3_Odd.BorderColor = System.Drawing.Color.Transparent
         Me.DetailData3_Odd.Borders = DevExpress.XtraPrinting.BorderSide.None
-        Me.DetailData3_Odd.BorderWidth = 1F
-        Me.DetailData3_Odd.Font = New System.Drawing.Font("Tahoma", 8F)
+        Me.DetailData3_Odd.BorderWidth = 1.0F
+        Me.DetailData3_Odd.Font = New System.Drawing.Font("Tahoma", 8.0F)
         Me.DetailData3_Odd.ForeColor = System.Drawing.Color.Black
         Me.DetailData3_Odd.Name = "DetailData3_Odd"
-        Me.DetailData3_Odd.Padding = New DevExpress.XtraPrinting.PaddingInfo(6, 6, 0, 0, 100F)
+        Me.DetailData3_Odd.Padding = New DevExpress.XtraPrinting.PaddingInfo(6, 6, 0, 0, 100.0F)
         Me.DetailData3_Odd.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
         ' 
         ' DetailCaptionBackground3
@@ -273,15 +274,15 @@ Public Class XtraReport1
         Me.DetailCaptionBackground3.BackColor = System.Drawing.Color.Transparent
         Me.DetailCaptionBackground3.BorderColor = System.Drawing.Color.FromArgb((CInt((CByte(206)))), (CInt((CByte(206)))), (CInt((CByte(206)))))
         Me.DetailCaptionBackground3.Borders = DevExpress.XtraPrinting.BorderSide.Top
-        Me.DetailCaptionBackground3.BorderWidth = 2F
+        Me.DetailCaptionBackground3.BorderWidth = 2.0F
         Me.DetailCaptionBackground3.Name = "DetailCaptionBackground3"
         ' 
         ' PageInfo
         ' 
-        Me.PageInfo.Font = New System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold)
+        Me.PageInfo.Font = New System.Drawing.Font("Tahoma", 8.0F, System.Drawing.FontStyle.Bold)
         Me.PageInfo.ForeColor = System.Drawing.Color.FromArgb((CInt((CByte(75)))), (CInt((CByte(75)))), (CInt((CByte(75)))))
         Me.PageInfo.Name = "PageInfo"
-        Me.PageInfo.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F)
+        Me.PageInfo.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0F)
         ' 
         ' customMailParameterLookup
         ' 
@@ -314,14 +315,14 @@ Public Class XtraReport1
         ' 
         ' XtraReport1
         ' 
-        Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() { Me.Detail, Me.TopMargin, Me.BottomMargin})
+        Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Detail, Me.TopMargin, Me.BottomMargin})
         Me.Margins = New System.Drawing.Printing.Margins(100, 100, 78, 100)
-        Me.Parameters.AddRange(New DevExpress.XtraReports.Parameters.Parameter() { Me.customMailParameterLookup, Me.customMailParameterText, Me.customMailParameterMultivalue, Me.customMailParameterMultivalueLookup})
-        Me.StyleSheet.AddRange(New DevExpress.XtraReports.UI.XRControlStyle() { Me.Title, Me.DetailCaption3, Me.DetailData3, Me.DetailData3_Odd, Me.DetailCaptionBackground3, Me.PageInfo})
+        Me.Parameters.AddRange(New DevExpress.XtraReports.Parameters.Parameter() {Me.customMailParameterLookup, Me.customMailParameterText, Me.customMailParameterMultivalue, Me.customMailParameterMultivalueLookup})
+        Me.StyleSheet.AddRange(New DevExpress.XtraReports.UI.XRControlStyle() {Me.Title, Me.DetailCaption3, Me.DetailData3, Me.DetailData3_Odd, Me.DetailCaptionBackground3, Me.PageInfo})
         Me.Version = "18.2"
         DirectCast(Me, System.ComponentModel.ISupportInitialize).EndInit()
 
     End Sub
 
-    #End Region
+#End Region
 End Class
