@@ -1,16 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Http;
-using System.Web.Mvc;
-using System.Web.Routing;
 using CustomReportParameterType.Services;
 using DevExpress.Web.Mvc;
 using DevExpress.XtraReports.Native;
-using DevExpress.XtraReports.Web.WebDocumentViewer;
+using System;
+using System.Web.Http;
+using System.Web.Mvc;
+using System.Web.Routing;
 
-namespace CustomReportParameterType {
+namespace CustomReportParameterType
+{
     // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
     // visit http://go.microsoft.com/?LinkId=9394801
 
@@ -21,7 +18,6 @@ namespace CustomReportParameterType {
             DevExpress.XtraReports.Web.QueryBuilder.Native.QueryBuilderBootstrapper.SessionState = System.Web.SessionState.SessionStateBehavior.Default;
             DevExpress.XtraReports.Web.ReportDesigner.Native.ReportDesignerBootstrapper.SessionState = System.Web.SessionState.SessionStateBehavior.Default;
             SerializationService.RegisterSerializer(CustomDataSerializer.Name, new CustomDataSerializer());
-
             MVCxReportDesigner.StaticInitialize();
             AreaRegistration.RegisterAllAreas();
 
