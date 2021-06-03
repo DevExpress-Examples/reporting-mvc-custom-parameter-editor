@@ -11,7 +11,6 @@ Namespace CustomReportParameterType.Services
 		End Function
 	End Class
 
-	'This class is required to display parameter values on document pages.
 	Public Class CustomParameterTypeConverter
 		Inherits TypeConverter
 

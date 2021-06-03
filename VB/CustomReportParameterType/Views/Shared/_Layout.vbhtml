@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -6,11 +6,11 @@
     <title>DevExpress ASP.NET project</title>
     
     @Html.DevExpress().GetStyleSheets(
-        new StyleSheet { ExtensionType = ExtensionType.ReportDesigner }
-    )
-    @Html.DevExpress().GetScripts( 
-        new Script { ExtensionType = ExtensionType.ReportDesigner }
-    )
+                                New StyleSheet With {.ExtensionType = ExtensionType.ReportDesigner}
+                )
+    @Html.DevExpress().GetScripts(
+                    New Script With {.ExtensionType = ExtensionType.ReportDesigner}
+                )
 </head>
 
 <body>

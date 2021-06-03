@@ -11,7 +11,6 @@ namespace CustomReportParameterType.Services {
         }
     }
 
-    //This class is required to display parameter values on document pages.
     public class CustomParameterTypeConverter : TypeConverter {
         public override object ConvertTo(ITypeDescriptorContext context, 
             CultureInfo culture, object value, Type destinationType) 

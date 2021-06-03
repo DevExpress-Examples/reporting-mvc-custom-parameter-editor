@@ -201,11 +201,11 @@
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Home\Designer.cshtml" />
-    <Content Include="Views\Home\Viewer.cshtml" />
+    <None Include="Views\Home\Index.vbhtml" />
+    <None Include="Views\Shared\_Layout.vbhtml" />
+    <None Include="Views\_ViewStart.vbhtml" />
+    <None Include="Views\Home\Designer.vbhtml" />
+    <None Include="Views\Home\Viewer.vbhtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

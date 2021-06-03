@@ -1,4 +1,4 @@
-@model DevExpress.XtraReports.UI.XtraReport
+@ModelType DevExpress.XtraReports.UI.XtraReport
 
 <script type="text/html" id="custom-parameter-text-editor">
     <div data-bind="dxTextBox: getOptions({ value: value, disabled: disabled }),
@@ -7,7 +7,7 @@
 <script type="text/javascript">
     function customizeParameterEditors(s, e) {
         if (e.parameter.type ===
-            "@typeof(CustomReportParameterType.Services.CustomParameterType).FullName") {
+            "@GetType(CustomReportParameterType.Services.CustomParameterType).FullName") {
             if(!e.parameter.multiValue && !e.parameter.hasLookUpValues) {
                 e.info.validationRules = e.info.validationRules || [];
                 e.info.validationRules.push(
@@ -17,7 +17,8 @@
         }
     }
 </script>
-@Html.DevExpress().WebDocumentViewer(settings => {
-    settings.Name = "WebDocumentViewer1";
-    settings.ClientSideEvents.CustomizeParameterEditors = "customizeParameterEditors";
-}).Bind(Model).GetHtml()
+
+@Html.DevExpress().WebDocumentViewer(Sub(settings)
+    settings.Name = "WebDocumentViewer1"
+    settings.ClientSideEvents.CustomizeParameterEditors = "customizeParameterEditors"
+End Sub).Bind(Model).GetHtml()
