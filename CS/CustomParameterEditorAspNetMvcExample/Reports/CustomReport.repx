@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="21.1.3.0" Ref="0" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v21.1, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="XtraReport" DisplayName="CustomReport" PageWidth="850" PageHeight="1100" Version="21.1">
+  <Extensions>
+    <Item1 Ref="1" Key="DataSerializationExtension" Value="myCustomDataSerializer" />
+  </Extensions>
+  <Parameters>
+    <Item1 Ref="4" Description="Custom Email Parameter" ValueSourceSettings="#Ref-2" Name="customMailParameterLookup" Type="#Ref-3" />
+    <Item2 Ref="5" Description="Additional Custom Email Parameter" ValueInfo="SampleMail@example.com" Name="customMailParameterText" Type="#Ref-3" />
+    <Item3 Ref="6" Description="Multi-value Email Parameter" MultiValue="true" Name="customMailParameterMultivalue" Type="#Ref-3" />
+    <Item4 Ref="8" Description="Predefined multi-value Email parameter" ValueSourceSettings="#Ref-7" MultiValue="true" Name="customMailParameterMultivalueLookup" Type="#Ref-3" />
+  </Parameters>
+  <Bands>
+    <Item1 Ref="9" ControlType="TopMarginBand" Name="TopMargin1" />
+    <Item2 Ref="10" ControlType="DetailBand" Name="Detail1" HeightF="288.54">
+      <Controls>
+        <Item1 Ref="11" ControlType="XRLabel" Name="label9" Multiline="true" Text="label9" SizeF="270.83,87.37" LocationFloat="379.17,201.17" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="12" EventName="BeforePrint" PropertyName="Text" Expression="?customMailParameterMultivalueLookup" />
+          </ExpressionBindings>
+        </Item1>
+        <Item2 Ref="13" ControlType="XRLabel" Name="label8" Multiline="true" Text="label8" SizeF="270.83,23" LocationFloat="379.17,154.28" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="14" EventName="BeforePrint" PropertyName="Text" Expression="?customMailParameterMultivalue" />
+          </ExpressionBindings>
+        </Item2>
+        <Item3 Ref="15" ControlType="XRLabel" Name="label7" Multiline="true" Text="label7" SizeF="270.83,23" LocationFloat="379.17,116.8" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="16" EventName="BeforePrint" PropertyName="Text" Expression="?customMailParameterText" />
+          </ExpressionBindings>
+        </Item3>
+        <Item4 Ref="17" ControlType="XRLabel" Name="label6" Multiline="true" Text="label6" SizeF="270.83,50.07" LocationFloat="379.17,50.13" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="18" EventName="BeforePrint" PropertyName="Text" Expression="?customMailParameterLookup" />
+          </ExpressionBindings>
+        </Item4>
+        <Item5 Ref="19" ControlType="XRLabel" Name="label5" Multiline="true" Text="Multiple email addresses (predefined list):" SizeF="379.17,87.37" LocationFloat="0,201.17" Font="Times New Roman, 14pt" Padding="2,2,0,0,100">
+          <StylePriority Ref="20" UseFont="false" />
+        </Item5>
+        <Item6 Ref="21" ControlType="XRLabel" Name="label4" Multiline="true" Text="Multiple email addresses:" SizeF="379.17,25.07" LocationFloat="0,152.21" Font="Times New Roman, 14pt" Padding="2,2,0,0,100">
+          <StylePriority Ref="22" UseFont="false" />
+        </Item6>
+        <Item7 Ref="23" ControlType="XRLabel" Name="label3" Multiline="true" Text="Single email address:" SizeF="379.17,24.02" LocationFloat="0,116.8" Font="Times New Roman, 14pt" Padding="2,2,0,0,100">
+          <StylePriority Ref="24" UseFont="false" />
+        </Item7>
+        <Item8 Ref="25" ControlType="XRLabel" Name="label2" Multiline="true" Text="Single email address (predefined list):" SizeF="379.17,50.07" LocationFloat="0,50.13" Font="Times New Roman, 14pt" Padding="2,2,0,0,100">
+          <StylePriority Ref="26" UseFont="false" />
+        </Item8>
+        <Item9 Ref="27" ControlType="XRLabel" Name="label1" Multiline="true" Text="Send this report to:" SizeF="293.75,33.4" LocationFloat="0,0" Font="Times New Roman, 14pt" Padding="2,2,0,0,100">
+          <StylePriority Ref="28" UseFont="false" />
+        </Item9>
+      </Controls>
+    </Item2>
+    <Item3 Ref="29" ControlType="BottomMarginBand" Name="BottomMargin1" />
+  </Bands>
+  <ObjectStorage>
+    <Item1 Ref="2" ObjectType="DevExpress.XtraReports.Parameters.StaticListLookUpSettings, DevExpress.Printing.v21.1.Core">
+      <LookUpValues>
+        <Item1 Ref="31" Value="#Ref-30" Description="First Mail Value" />
+        <Item2 Ref="33" Value="#Ref-32" Description="Second Mail Value" />
+      </LookUpValues>
+    </Item1>
+    <Item2 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v21.1" Ref="3" Content="CustomParameterEditorAspNetMvcExample.CustomParameterType" Type="System.Type" />
+    <Item3 Ref="7" ObjectType="DevExpress.XtraReports.Parameters.StaticListLookUpSettings, DevExpress.Printing.v21.1.Core">
+      <LookUpValues>
+        <Item1 Ref="35" Value="#Ref-34" Description="Third Mail Value" />
+        <Item2 Ref="37" Value="#Ref-36" Description="Fourth Mail Value" />
+      </LookUpValues>
+    </Item3>
+    <Item4 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v21.1" Ref="30" Content="MyFirtsMail@example.com" Type="CustomParameterEditorAspNetMvcExample.CustomParameterType" />
+    <Item5 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v21.1" Ref="32" Content="MySecondMail@example.com" Type="CustomParameterEditorAspNetMvcExample.CustomParameterType" />
+    <Item6 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v21.1" Ref="34" Content="MyThirdMail@example.com" Type="CustomParameterEditorAspNetMvcExample.CustomParameterType" />
+    <Item7 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v21.1" Ref="36" Content="MyFourthMail@example.com" Type="CustomParameterEditorAspNetMvcExample.CustomParameterType" />
+  </ObjectStorage>
+</XtraReportsLayoutSerializer>
