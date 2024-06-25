@@ -22,8 +22,11 @@ namespace CustomParameterEditorAspNetMvcExample {
             DevExpress.XtraReports.Web.ReportDesigner.Native.ReportDesignerBootstrapper.SessionState = System.Web.SessionState.SessionStateBehavior.Default;
             DevExpress.XtraReports.Web.Extensions.ReportStorageWebExtension.RegisterExtensionGlobal(new CustomReportStorageWebExtension(Server.MapPath("/Reports")));
 
+            DevExpress.Utils.DeserializationSettings.RegisterTrustedClass(typeof(CustomParameterType));
+            DevExpress.Utils.DeserializationSettings.RegisterTrustedClass(typeof(CustomParameterType[]));
             DevExpress.XtraReports.Native.SerializationService.RegisterSerializer(
                 CustomDataSerializer.Name, new CustomDataSerializer());
+            
 
             System.Net.ServicePointManager.SecurityProtocol |= System.Net.SecurityProtocolType.Tls12;
             MVCxReportDesigner.StaticInitialize();

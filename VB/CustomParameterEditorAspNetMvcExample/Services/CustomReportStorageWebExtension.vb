@@ -46,7 +46,7 @@ Namespace Services
                     End Using
                 End If
             Catch e1 As Exception
-                Throw New FaultException(new FaultReason("Could not get report data."), new FaultCode("Server"), "GetData")
+                Throw New FaultException(New FaultReason("Could not get report data."), New FaultCode("Server"), "GetData")
             End Try
             Throw New FaultException(New FaultReason(String.Format("Could not find report '{0}'.", url)), New FaultCode("Server"), "GetData")
         End Function
@@ -59,18 +59,18 @@ Namespace Services
             Return Directory.GetFiles(reportDirectory, "*" & FileExtension).Select(AddressOf Path.GetFileNameWithoutExtension).Concat(ReportsFactory.Reports.Select(Function(x) x.Key)).ToDictionary(Function(x) x)
         End Function
 
-		#Region "SetData"
-		Public Overrides Sub SetData(ByVal report As XtraReport, ByVal url As String)
-			' Stores the specified report to a Report Storage using the specified URL. 
-			' This method is called only after the IsValidUrl and CanSetData methods are called.
-			Dim resolvedUrl = Path.GetFullPath(Path.Combine(reportDirectory, url + FileExtension))
-			If Not resolvedUrl.StartsWith(reportDirectory + Path.DirectorySeparatorChar) Then
-				Throw New FaultException("Invalid report name.")
-			End If
+#Region "SetData"
+        Public Overrides Sub SetData(ByVal report As XtraReport, ByVal url As String)
+            ' Stores the specified report to a Report Storage using the specified URL. 
+            ' This method is called only after the IsValidUrl and CanSetData methods are called.
+            Dim resolvedUrl = Path.GetFullPath(Path.Combine(reportDirectory, url + FileExtension))
+            If Not resolvedUrl.StartsWith(reportDirectory + Path.DirectorySeparatorChar) Then
+                Throw New FaultException("Invalid report name.")
+            End If
 
-			report.SaveLayoutToXml(resolvedUrl)
-		End Sub
-		#End Region
+            report.SaveLayoutToXml(resolvedUrl)
+        End Sub
+#End Region
 
         Public Overrides Function SetNewData(ByVal report As XtraReport, ByVal defaultUrl As String) As String
             ' Stores the specified report using a new URL. 

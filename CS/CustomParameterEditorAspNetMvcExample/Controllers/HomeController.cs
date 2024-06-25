@@ -1,8 +1,7 @@
 using DevExpress.XtraReports.Native;
 using System.Web.Mvc;
 
-namespace CustomParameterEditorAspNetMvcExample.Controllers
-{
+namespace CustomParameterEditorAspNetMvcExample.Controllers {
     public class HomeController : Controller {
         public ActionResult Index() {
             return View();

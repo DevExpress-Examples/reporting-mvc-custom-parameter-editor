@@ -9,10 +9,8 @@ using DevExpress.XtraReports.Web.Extensions;
 using DevExpress.XtraReports.UI;
 using CustomParameterEditorAspNetMvcExample.PredefinedReports;
 
-namespace CustomParameterEditorAspNetMvcExample.Services
-{
-    public class CustomReportStorageWebExtension : DevExpress.XtraReports.Web.Extensions.ReportStorageWebExtension
-    {
+namespace CustomParameterEditorAspNetMvcExample.Services {
+    public class CustomReportStorageWebExtension : DevExpress.XtraReports.Web.Extensions.ReportStorageWebExtension {
         readonly string reportDirectory;
         const string FileExtension = ".repx";
         public CustomReportStorageWebExtension(string reportDirectory) {
@@ -42,18 +40,17 @@ namespace CustomParameterEditorAspNetMvcExample.Services
             // Returns report layout data stored in a Report Storage using the specified URL. 
             // This method is called only for valid URLs after the IsValidUrl method is called.
             try {
-                if (Directory.EnumerateFiles(reportDirectory).Select(Path.GetFileNameWithoutExtension).Contains(url))
-                {
+                if (Directory.EnumerateFiles(reportDirectory).Select(Path.GetFileNameWithoutExtension).Contains(url)) {
                     return File.ReadAllBytes(Path.Combine(reportDirectory, url + FileExtension));
                 }
-                if (ReportsFactory.Reports.ContainsKey(url))
-                {
+                if (ReportsFactory.Reports.ContainsKey(url)) {
                     using (MemoryStream ms = new MemoryStream()) {
                         ReportsFactory.Reports[url]().SaveLayoutToXml(ms);
                         return ms.ToArray();
                     }
                 }
-            } catch (Exception) {
+            }
+            catch (Exception) {
                 throw new FaultException(new FaultReason("Could not get report data."), new FaultCode("Server"), "GetData");
             }
             throw new FaultException(new FaultReason(string.Format("Could not find report '{0}'.", url)), new FaultCode("Server"), "GetData");
@@ -63,13 +60,13 @@ namespace CustomParameterEditorAspNetMvcExample.Services
             // Returns a dictionary of the existing report URLs and display names. 
             // This method is called when running the Report Designer, 
             // before the Open Report and Save Report dialogs are shown and after a new report is saved to a storage.
-            
+
             return Directory.GetFiles(reportDirectory, "*" + FileExtension)
                                      .Select(Path.GetFileNameWithoutExtension)
                                      .Union(ReportsFactory.Reports.Select(x => x.Key))
                                      .ToDictionary<string, string>(x => x);
         }
-        
+
         public override void SetData(XtraReport report, string url) {
             // Stores the specified report to a Report Storage using the specified URL. 
             // This method is called only after the IsValidUrl and CanSetData methods are called.

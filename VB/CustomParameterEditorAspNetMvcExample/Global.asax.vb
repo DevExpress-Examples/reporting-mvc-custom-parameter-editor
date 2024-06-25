@@ -22,6 +22,8 @@ Public Class MvcApplication
                                                                                System.Diagnostics.Debug.WriteLine("[{0}]: Exception occurred. Message: '{1}'. Exception Details:\r\n{2}", DateTime.Now, message, ex)
                                                                            End Sub)
 #Region "RegisterSerializer"
+        DevExpress.Utils.DeserializationSettings.RegisterTrustedClass(GetType(CustomParameterType))
+        DevExpress.Utils.DeserializationSettings.RegisterTrustedClass(GetType(CustomParameterType()))
         DevExpress.XtraReports.Native.SerializationService.RegisterSerializer(
                 CustomParameterEditorAspNetMvcExample.CustomDataSerializer.Name,
                 New CustomParameterEditorAspNetMvcExample.CustomDataSerializer())
