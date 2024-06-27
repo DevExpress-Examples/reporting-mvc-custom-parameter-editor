@@ -11,20 +11,20 @@ This example demonstrates how to use custom types for report parameters, create 
 ## Files to Review
 
 CS:
-- [CustomDataSerializer.cs](CS\CustomParameterEditorAspNetMvcExample\Services\CustomDataSerializer.cs)
-- [CustomParameterType.cs](CS\CustomParameterEditorAspNetMvcExample\Services\CustomParameterType.cs)
-- [CustomReportStorageWebExtension.cs](CS\CustomParameterEditorAspNetMvcExample\Services\CustomReportStorageWebExtension.cs)
-- [HomeController.cs](CS\CustomParameterEditorAspNetMvcExample\Controllers\HomeController.cs)
-- [Viewer.cshtml](CS\CustomParameterEditorAspNetMvcExample\Views\Home\Viewer.cshtml)
-- [Designer.cshtml](CS\CustomParameterEditorAspNetMvcExample\Views\Home\Designer.cshtml)
+- [CustomDataSerializer.cs](CS/CustomParameterEditorAspNetMvcExample/Services/CustomDataSerializer.cs)
+- [CustomParameterType.cs](CS/CustomParameterEditorAspNetMvcExample/Services/CustomParameterType.cs)
+- [CustomReportStorageWebExtension.cs](CS/CustomParameterEditorAspNetMvcExample/Services/CustomReportStorageWebExtension.cs)
+- [HomeController.cs](CS/CustomParameterEditorAspNetMvcExample/Controllers/HomeController.cs)
+- [Viewer.cshtml](CS/CustomParameterEditorAspNetMvcExample/Views/Home/Viewer.cshtml)
+- [Designer.cshtml](CS/CustomParameterEditorAspNetMvcExample/Views/Home/Designer.cshtml)
 
 VB:
-- [CustomDataSerializer.vb](VB\CustomParameterEditorAspNetMvcExample\Services\CustomDataSerializer.vb)
-- [CustomParameterType.vb](VB\CustomParameterEditorAspNetMvcExample\Services\CustomParameterType.vb)
-- [CustomReportStorageWebExtension.vb](VB\CustomParameterEditorAspNetMvcExample\Services\CustomReportStorageWebExtension.vb)
-- [HomeController.vb](VB\CustomParameterEditorAspNetMvcExample\Controllers\HomeController.vb)
-- [Viewer.vbhtml](VB\CustomParameterEditorAspNetMvcExample\Views\Home\Viewer.vbhtml)
-- [Designer.vbhtml](VB\CustomParameterEditorAspNetMvcExample\Views\Home\Designer.vbhtml)
+- [CustomDataSerializer.vb](VB/CustomParameterEditorAspNetMvcExample/Services/CustomDataSerializer.vb)
+- [CustomParameterType.vb](VB/CustomParameterEditorAspNetMvcExample/Services/CustomParameterType.vb)
+- [CustomReportStorageWebExtension.vb](VB/CustomParameterEditorAspNetMvcExample/Services/CustomReportStorageWebExtension.vb)
+- [HomeController.vb](VB/CustomParameterEditorAspNetMvcExample/Controllers/HomeController.vb)
+- [Viewer.vbhtml](VB/CustomParameterEditorAspNetMvcExample/Views/Home/Viewer.vbhtml)
+- [Designer.vbhtml](VB/CustomParameterEditorAspNetMvcExample/Views/Home/Designer.vbhtml)
 
 ## Documentation
 
