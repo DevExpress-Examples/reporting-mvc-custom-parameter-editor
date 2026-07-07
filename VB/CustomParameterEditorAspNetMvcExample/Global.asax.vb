@@ -24,9 +24,7 @@ Public Class MvcApplication
 #Region "RegisterSerializer"
         DevExpress.Utils.DeserializationSettings.RegisterTrustedClass(GetType(CustomParameterType))
         DevExpress.Utils.DeserializationSettings.RegisterTrustedClass(GetType(CustomParameterType()))
-        DevExpress.XtraReports.Native.SerializationService.RegisterSerializer(
-                CustomParameterEditorAspNetMvcExample.CustomDataSerializer.Name,
-                New CustomParameterEditorAspNetMvcExample.CustomDataSerializer())
+        DevExpress.Utils.Serializing.ObjectDataSerializer.Register(CustomDataSerializer.Name, New CustomDataSerializer())
 #End Region
 
         AreaRegistration.RegisterAllAreas()

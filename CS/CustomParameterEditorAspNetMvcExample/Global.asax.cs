@@ -24,9 +24,8 @@ namespace CustomParameterEditorAspNetMvcExample {
 
             DevExpress.Utils.DeserializationSettings.RegisterTrustedClass(typeof(CustomParameterType));
             DevExpress.Utils.DeserializationSettings.RegisterTrustedClass(typeof(CustomParameterType[]));
-            DevExpress.XtraReports.Native.SerializationService.RegisterSerializer(
-                CustomDataSerializer.Name, new CustomDataSerializer());
-            
+            DevExpress.Utils.Serializing.ObjectDataSerializer.Register(CustomDataSerializer.Name, new CustomDataSerializer());
+
 
             System.Net.ServicePointManager.SecurityProtocol |= System.Net.SecurityProtocolType.Tls12;
             MVCxReportDesigner.StaticInitialize();
